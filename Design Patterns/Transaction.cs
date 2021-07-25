@@ -12,6 +12,7 @@ namespace Design_Patterns
         void Notify();
         void AddObserver(Observer observer);
         void RemoveObserver(Observer observer);
+        void InternationalTransaction(InternationalMerchant merchant);
 
     }
 }

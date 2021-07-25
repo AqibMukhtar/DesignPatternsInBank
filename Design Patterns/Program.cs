@@ -11,16 +11,11 @@ namespace Design_Patterns
         static void Main(string[] args)
         {
             AboveEighteenAccountBuilder myAccountBuilder = new AboveEighteenAccountBuilder();
-            AboveEighteenAccount myAccount = myAccountBuilder.BuildAccount("Silver", "Gold");
+            AboveEighteenAccount myAccount = myAccountBuilder.BuildAccount("Gold", "Gold");
 
-            SMSNotifier sms = new SMSNotifier();
+            EBayPurchase ebay = new EBayPurchase();
 
-            Console.WriteLine(myAccount.silverDebitCard.CheckDebit());
-            Console.WriteLine(myAccount.goldCreditCard.CheckCredit());
-            myAccount.silverDebitCard.MakeTransaction();
-            myAccount.silverDebitCard.AddObserver(sms);
-            myAccount.silverDebitCard.RemoveObserver(sms);
-            myAccount.silverDebitCard.Notify();
+            myAccount.goldCreditCard.InternationalTransaction(ebay);
 
             Console.ReadLine();
         }

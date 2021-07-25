@@ -46,13 +46,16 @@
     <Compile Include="AboveEighteenAccount.cs" />
     <Compile Include="AboveEighteenAccountBuilder.cs" />
     <Compile Include="AccountBuilder.cs" />
+    <Compile Include="AmazonPurchase.cs" />
     <Compile Include="BankCard.cs" />
     <Compile Include="CreditCard.cs" />
     <Compile Include="DebitCard.cs" />
+    <Compile Include="EBayPurchase.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="GoldCard.cs" />
     <Compile Include="GoldCreditCard.cs" />
     <Compile Include="GoldDebitCard.cs" />
+    <Compile Include="InternationalMerchant.cs" />
     <Compile Include="Observer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
