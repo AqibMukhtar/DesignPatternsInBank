@@ -10,6 +10,11 @@ namespace Design_Patterns
     {
         static void Main(string[] args)
         {
+            UnderEighteenAccountBuilder myAccountBuilder = new UnderEighteenAccountBuilder();
+            UnderEighteenAccount myAccount = myAccountBuilder.BuildAccount("Silver", "Gold");
+            Console.WriteLine(myAccount.silverDebitCard.CheckDebit());
+            Console.WriteLine(myAccount.goldCreditCard.CheckCredit());
+            Console.ReadLine();
         }
     }
 }

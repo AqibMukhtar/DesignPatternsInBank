@@ -1,1 +1,6 @@
 C:\Users\Aqib Mukhtar\Desktop\Design Patterns\Design Patterns\bin\Debug\Design Patterns.exe.config
+C:\Users\Aqib Mukhtar\Desktop\Design Patterns\Design Patterns\bin\Debug\Design Patterns.exe
+C:\Users\Aqib Mukhtar\Desktop\Design Patterns\Design Patterns\bin\Debug\Design Patterns.pdb
+C:\Users\Aqib Mukhtar\Desktop\Design Patterns\Design Patterns\obj\Debug\Design Patterns.csprojResolveAssemblyReference.cache
+C:\Users\Aqib Mukhtar\Desktop\Design Patterns\Design Patterns\obj\Debug\Design Patterns.exe
+C:\Users\Aqib Mukhtar\Desktop\Design Patterns\Design Patterns\obj\Debug\Design Patterns.pdb
