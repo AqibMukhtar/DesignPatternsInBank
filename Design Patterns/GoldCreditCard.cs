@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Design_Patterns
 {
-    class GoldCreditCard : CreditCard
+    class GoldCreditCard : CreditCard, Transaction
     {
+        LinkedList<Observer> transactionObservers = new LinkedList<Observer>();
+
         public int CheckCredit()
         {
             Console.WriteLine("Checking Credit for Gold Card");
@@ -18,6 +20,29 @@ namespace Design_Patterns
         {
             Console.WriteLine("Checking Credit Limit for Gold Card");
             return 300;
+        }
+
+        public void MakeTransaction()
+        {
+            Console.WriteLine("Transaction has been made from Gold Credit Card");
+        }
+
+        public void Notify()
+        {
+            foreach (Observer transactionObserver in transactionObservers)
+            {
+                transactionObserver.Update();
+            }
+        }
+        public void AddObserver(Observer observer)
+        {
+            transactionObservers.AddLast(observer);
+            Console.WriteLine("New Observer has been added");
+        }
+        public void RemoveObserver(Observer observer)
+        {
+            transactionObservers.Remove(observer);
+            Console.WriteLine("An observer has been removed");
         }
     }
 }
