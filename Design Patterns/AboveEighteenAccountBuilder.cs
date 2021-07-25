@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Design_Patterns
 {
-    class UnderEighteenAccountBuilder : AccountBuilder
+    class AboveEighteenAccountBuilder : AccountBuilder
     {
         public bool VerifyIdentity()
         {
-            Console.WriteLine("Identity verified for under eighteen customer");
+            Console.WriteLine("Identity verified for above eighteen customer");
             return true;
         }
 
@@ -26,21 +26,21 @@ namespace Design_Patterns
             return bc.CreateCreditCard();
         }
 
-        public UnderEighteenAccount BuildAccount(string debitCardType, string creditCardType)
+        public AboveEighteenAccount BuildAccount(string debitCardType, string creditCardType)
         {
-            UnderEighteenAccount account = new UnderEighteenAccount();
+            AboveEighteenAccount account = new AboveEighteenAccount();
             SilverCard sc = new SilverCard();
             GoldCard gc = new GoldCard();
 
             if (VerifyIdentity() != true) throw new Exception();
             if (debitCardType == "Silver")
-                account.silverDebitCard = (SilverDebitCard) CreateBankDebitCard(sc);
+                account.silverDebitCard = (SilverDebitCard)CreateBankDebitCard(sc);
             else if (debitCardType == "Gold")
-                account.goldDebitCard = (GoldDebitCard) CreateBankDebitCard(gc);
+                account.goldDebitCard = (GoldDebitCard)CreateBankDebitCard(gc);
             if (creditCardType == "Silver")
-                account.silverCreditCard = (SilverCreditCard) CreateBankCreditCard(sc);
+                account.silverCreditCard = (SilverCreditCard)CreateBankCreditCard(sc);
             else if (creditCardType == "Gold")
-                account.goldCreditCard = (GoldCreditCard) CreateBankCreditCard(gc);
+                account.goldCreditCard = (GoldCreditCard)CreateBankCreditCard(gc);
 
             return account;
         }
